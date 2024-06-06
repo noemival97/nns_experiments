@@ -56,7 +56,7 @@ def genetic(type_lg, seed):
     global TYPE
     TYPE=type_lg
     start_time=time.time()
-    nn=nw.Nw(seed)
+    nn=nw.Nw(seed, False)
     random.seed(seed)
 
     POPULATION=50
@@ -85,18 +85,16 @@ def genetic(type_lg, seed):
     while gen<GENERATIONS:
         print(f"Generazione: {gen}\n")      
         # Evaluate the individuals with an no fitness
-        no_fit_ind = [ind for ind in population if not ind.fitness.valid]
-        fitnesses = [toolbox.evaluate(ind, nn) for ind in no_fit_ind]
+        fitnesses = [toolbox.evaluate(ind, nn) for ind in population]
 
-        for ind, fit in zip(no_fit_ind, fitnesses):
+        for ind, fit in zip(population, fitnesses):
             ind.fitness.values = fit
         k_top= tools.selBest(population,K)
         best_individual=k_top[0]
-        all_fit_values = [ind.fitness.values[0] for ind in population]
         print([ind.fitness.values[0] for ind in k_top])
         print(f"Individuo migliore: {best_individual} with fitness {best_individual.fitness.values}\n")
-        print(f"Valore minimo della fitness: {min(all_fit_values)}\n")
-        print(f"Media della fitness: {sum(all_fit_values) / len(population)}\n")
+        print(f"Valore minimo della fitness: {min(ind.fitness.values[0] for ind in population)}\n")
+        print(f"Media della fitness: {sum(ind.fitness.values[0] for ind in population) / len(population)}\n")
         print(f"Valore massimo della fitness: {best_individual.fitness.values}\n")
         
         if termination_check(best_individual) or gen==GENERATIONS-1:

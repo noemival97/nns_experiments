@@ -1,0 +1,33 @@
+Traceback (most recent call last):
+  File "/home/nvalentini/Documenti/nns.py/logic_gates/try/noise.py", line 8, in <module>
+    import utils
+ModuleNotFoundError: No module named 'utils'
+sh: run_or.sh: File o directory non esistente
+Traceback (most recent call last):
+  File "/home/nvalentini/Documenti/nns.py/logic_gates/try/xor_eval_stab.py", line 1, in <module>
+    import matplotlib.pyplot as plt # type: ignore
+ModuleNotFoundError: No module named 'matplotlib'
+Traceback (most recent call last):
+  File "/home/nvalentini/Documenti/nns.py/logic_gates/try/xor_eval_stab.py", line 1, in <module>
+    import matplotlib.pyplot as plt # type: ignore
+ModuleNotFoundError: No module named 'matplotlib'
+Traceback (most recent call last):
+  File "/home/nvalentini/Documenti/nns.py/logic_gates/try/xor_eval_stab.py", line 1, in <module>
+    import matplotlib.pyplot as plt # type: ignore
+ModuleNotFoundError: No module named 'matplotlib'
+Traceback (most recent call last):
+  File "/home/nvalentini/Documenti/nns.py/logic_gates/try/noise.py", line 54, in <module>
+    risultati= get_best_data(f'./best_values_{type_lg}_noise.txt')
+  File "/home/nvalentini/Documenti/nns.py/logic_gates/try/noise.py", line 43, in get_best_data
+    individuo_corrente = eval(line.replace('Individuo:', '').strip())
+  File "<string>", line 1
+    [[4, 9, 12, 0, 15], -1.4491831226940466, -0.7873600510047218, 1] with fitness : (100.0,)
+                                                                     ^^^^
+SyntaxError: invalid syntax
+Terminato
+Terminato
+Terminato
+Traceback (most recent call last):
+  File "/home/nvalentini/Documenti/nns.py/logic_gates/stat/noise.py", line 70, in <module>
+    Vs=nn.stimulation(individual, True)
+TypeError: Nw.stimulation() takes 2 positional arguments but 3 were given

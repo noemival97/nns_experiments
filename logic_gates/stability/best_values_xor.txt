@@ -1,0 +1,39 @@
+rete 1
+XOR experiment end in 0 and 1034.0555312633514 second
+Best Individual [[14, 9, 0, 12, 3], 1.353710903019552, 0.5075626510725071, 0] with fitness (100.0,)
+
+rete 2 
+XOR experiment end in 17 and 9201.925885438919 second 
+Best Individual [[11, 8, 5, 9, 12], -4.761419208592178, -1.7485707123883998, 0] with fitness : (100.0,)
+
+rete 3
+XOR experiment end in 99 and 54356.9205391407 second 
+Best Individual [[15, 6, 8, 2, 14], 4.159448117309811, -0.2594646345287348, 0] with fitness : (50.0,)
+
+rete 4
+XOR experiment end in 99 and 53312.626430273056 second 
+Best Individual [[11, 7, 9, 6, 2], -3.044265056666846, -0.87205343592675, 0] with fitness : (100.0,)
+
+rete 5
+XOR experiment end in 44 and 23897.565928459167 second 
+Best Individual [[15, 12, 13, 2, 6], 4.643706682031013, 0.49932931464642927, 1] with fitness : (100.0,)
+
+rete 6
+XOR experiment end in 9 and 5185.012540102005 second 
+Best Individual [[10, 3, 8, 14, 0], 2.8641816828463185, 0.6891536255691548, 0] with fitness : (100.0,)
+
+rete 7 
+XOR experiment end in 99 and 54949.3634595871 second 
+Best Individual [[3, 13, 6, 15, 10], -4.1405276631082835, -0.8182784862924048, 0] with fitness : (75.0,)
+
+rete 8 
+XOR experiment end in 99 and 51956.444476127625 second 
+Best Individual [[11, 3, 12, 15, 7], -3.247490103733486, -1.0373605701131963, 0] with fitness : (75.0,)
+
+rete 9 
+XOR experiment end in 99 and 55583.79005432129 second 
+Best Individual [[7, 2, 1, 4, 0], -4.151634382234652, -0.0325835095653213, 0] with fitness : (75.0,)
+
+rete 10 
+XOR experiment end in 61 and 32989.26689720154 second 
+Best Individual [[4, 9, 12, 0, 15], -1.4491831226940466, -0.7873600510047218, 1] with fitness : (100.0,)

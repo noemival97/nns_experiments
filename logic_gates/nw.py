@@ -1,11 +1,11 @@
 from ctypes import *
 from nnspy import *
-
+import numpy as np 
 import utils
 
 
 class Nw():
-    def __init__(self, seed) -> None:
+    def __init__(self, seed, noise) -> None:
         
         # describe the network
         ds = datasheet()
@@ -39,6 +39,7 @@ class Nw():
                 print(n2c[self.mea.e2n[i * 4 + j]], end="  ")
             print()
         print("! CHECK THAT ALL THE I/O/C ARE CONNECTED TO THE SAME COMPONENT !")
+        self.noise = noise
 
     def stimulation(self,individual):
         pins=individual[0]
@@ -58,7 +59,8 @@ class Nw():
 
         # for each input configuration collect the output voltage
         Vs = []
-        config, cv = utils.input_conf(pins[:3], v)  
+        config, cv = utils.input_conf(pins[:3], v, self.noise)  
+
         for c in config:    
 
             # relaxation time: avoid influence of previous evaluations
@@ -81,7 +83,7 @@ class Nw():
 
                 nns.update_conductance(self.ns, self.cc)
                 nns.voltage_stimulation(self.ns, self.cc, it, ios)
-                Vs.append(self.ns.Vs[self.mea.e2n[OUTPUT]])
+                Vs.append(self.ns.Vs[self.mea.e2n[OUTPUT]] + (np.random.normal(utils.MU_N, utils.SIG_N) if self.noise else 0))
 
 
         self.mea.ct[pins[0]] = 0    # SOURCE: i1
